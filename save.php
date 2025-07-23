@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email']);
 
     if (!empty($name) && !empty($email)) {
-        $stmt = $conn->prepare("INSERT INTO users (name, email) VALUES (:name, :email)");
+        $stmt = $pdo->prepare("INSERT INTO users (name, email) VALUES (:name, :email)");
         $stmt->execute([
             ':name'  => $name,
             ':email' => $email
