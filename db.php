@@ -1,7 +1,7 @@
 <?php
 
 $host="shortline.proxy.rlwy.net";
-$port = '7265';
+$port = "49620";
 $dbname = "railway"; 
 $username = "root";
 $password = "SjSEFWDiAcNiSpdLwATXuUdaSJKNzvDO";
