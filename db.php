@@ -1,12 +1,13 @@
 <?php
-$host = "localhost";
-$dbname = "clinic_db";
+$host = "mysql-_655.railway.internal";
+$dbname = "railway";
 $username = "root";
-$password = "";
+$password = "fSjSEFWDiAcNiSpdLwATXuUdaSJKNzvDO";
 
 try {
-$conn = new PDO("mysql:host=localhost;dbname=clinic_db;charset=utf8mb4", "root", "");
+    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+    // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    echo "Something went wrong. Please try again later.";
+    echo "Database connection failed.";
 }
 ?>
