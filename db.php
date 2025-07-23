@@ -18,7 +18,7 @@ $MYSQLUSER="root";
 
 $dsn = "mysql:host=$MYSQLHOST;dbname=$MYSQLDATABASE;port=$MYSQLPORT";
 try {
-    $pdo = new \PDO($dsn, $MYSQLUSER, $MYSQLPASSWORD, $options);
+    $pdo = new \PDO($dsn, $MYSQLUSER, $MYSQLPASSWORD);
 } catch (\PDOException $e) {
     throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
