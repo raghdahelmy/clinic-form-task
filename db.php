@@ -1,17 +1,17 @@
 <?php
 
-$host="shortline.proxy.rlwy.net";
-$port = "49620";
-$dbname = "railway"; 
-$username = "root";
-$password = "SjSEFWDiAcNiSpdLwATXuUdaSJKNzvDO";
-
-
-
-// $host = "localhost";
-// $dbname = "clinic_db"; // اسم قاعدة البيانات عندك
+// $host="shortline.proxy.rlwy.net";
+// $port = "49620";
+// $dbname = "railway"; 
 // $username = "root";
-// $password = "";
+// $password = "SjSEFWDiAcNiSpdLwATXuUdaSJKNzvDO";
+
+
+
+$host = "localhost";
+$dbname = "clinic_db"; // اسم قاعدة البيانات عندك
+$username = "root";
+$password = "";
 
 try {
     $conn = new PDO("mysql:host=$host;dbname=$dbname;port=$port", $username, $password);
