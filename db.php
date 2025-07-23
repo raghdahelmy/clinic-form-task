@@ -1,11 +1,20 @@
 <?php
-$host = "localhost";
-$dbname = "clinic_db"; // اسم قاعدة البيانات عندك
+
+$host="shortline.proxy.rlwy.net";
+$port = '7265';
+$dbname = "railway"; 
 $username = "root";
-$password = "";
+$password = "SjSEFWDiAcNiSpdLwATXuUdaSJKNzvDO";
+
+
+
+// $host = "localhost";
+// $dbname = "clinic_db"; // اسم قاعدة البيانات عندك
+// $username = "root";
+// $password = "";
 
 try {
-    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+    $conn = new PDO("mysql:host=$host;dbname=$dbname;port=$port", $username, $password);
     // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // ممكن تفعليه وقت الديبج
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
