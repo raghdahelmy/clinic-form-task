@@ -6,13 +6,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email']);
 
     if (!empty($name) && !empty($email)) {
-        $createdAt = date('Y-m-d H:i:s'); // التاريخ الحالي من PHP
-
-        $stmt = $conn->prepare("INSERT INTO users (name, email, createdat) VALUES (:name, :email, :createdat)");
+        $stmt = $conn->prepare("INSERT INTO users (name, email) VALUES (:name, :email)");
         $stmt->execute([
-            ':name' => $name,
-            ':email' => $email,
-            ':createdat' => $createdAt
+            ':name'  => $name,
+            ':email' => $email
         ]);
 
         echo "User saved successfully!";
