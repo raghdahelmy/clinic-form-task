@@ -1,5 +1,5 @@
 <?php
-$host = "mysql-_655.railway.internal";
+$host = "mysql-vefu.railway.internal";
 $dbname = "railway";
 $username = "root";
 $password = "fSjSEFWDiAcNiSpdLwATXuUdaSJKNzvDO";
